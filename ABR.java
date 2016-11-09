@@ -3,10 +3,12 @@ public class ABR {
 
 	private int elements;
 	public Node root;
+	public int[] element;
 	
 	public ABR(){
 		this.elements = 0;
 		this.root = null;
+		this.element = null;
 	}
 	
 	public void insert(int i){
@@ -40,6 +42,7 @@ public class ABR {
 			}
 			elements += 1;
 		}
+		toList(i);
 	}
 	
 	public boolean isEmpty(){
@@ -67,4 +70,14 @@ public class ABR {
 		return false;
 	}
 	
+	public void toList(int i){
+		int j = 0;
+		while ((i > element[j]) && (i < elements)){
+			j += 1;
+		}
+		for(int k = 0; k < (elements-j); k++){
+			element[elements-k] = element[elements-1-k];
+		}
+		element[j] = i;
+	}
 }
