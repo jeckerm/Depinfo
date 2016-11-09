@@ -1,7 +1,7 @@
 public class Node {
 
-	private Node child_left;
-	private Node child_right;
+	public Node child_left;
+	public Node child_right;
 	private char valeur;
 	
 	public Node(char i){
@@ -13,5 +13,6 @@ public class Node {
 	public char getValeur(){
 		return this.valeur;
 	}
+
 	
 }
